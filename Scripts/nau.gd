@@ -39,6 +39,8 @@ var pot_disparar: bool = true
 @onready var barra_vida: TextureProgressBar = $Centre/BarraVida
 @onready var so_bomba: AudioStreamPlayer2D = $SoBomba
 
+
+
 func _physics_process(delta: float) -> void:
 	vel_rotacio = 0
 	
@@ -48,10 +50,15 @@ func _physics_process(delta: float) -> void:
 		vel_rotacio -= vel_rotacio_max
 	if Input.is_action_pressed("Endavant"):
 		acceleracio = Vector2.UP.rotated(global_rotation) * accel_max
+		$SoMotor.play()
+		$Estela.emitting = true
 	else:
 		acceleracio = -velocity.normalized() * frenada
+		$SoMotor.stop()
+		$Estela.emitting = false
 	
 	if pot_disparar and Input.is_action_just_pressed("Dispara"):
+		await  0.1
 		dispara()
 	
 	if bombes > 0 and Input.is_action_just_pressed("Bomba"):

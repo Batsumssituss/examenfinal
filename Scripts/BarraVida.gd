@@ -13,3 +13,5 @@ func _process(delta: float) -> void:
 func actualitza(nou_valor) -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "value", nou_valor, 0.3).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	if nou_valor <= 0:
+		get_tree().change_scene_to_file("res://Escenes/game_over.tscn")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bluwgvsuletns"]
+
+[ext_resource type="Script" uid="uid://5dbeb35vnymr" path="res://Scripts/escenaprincipal.gd" id="1_7l0pj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7l0pj")
+
+[node name="entrar al joc" type="Button" parent="."]
+layout_mode = 0
+offset_right = 153.0
+offset_bottom = 39.0
+text = "Entrar al joc"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 238.193
+offset_top = 9.95175
+offset_right = 339.193
+offset_bottom = 40.9518
+text = "Sortr del joc"
+
+[connection signal="pressed" from="entrar al joc" to="." method="_on_entrar_al_joc_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

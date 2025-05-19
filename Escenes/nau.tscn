@@ -120,6 +120,7 @@ position = Vector2(-46, -4)
 [node name="Estela" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_qqh3o")
 position = Vector2(0, 38)
+emitting = false
 amount = 50
 texture = ExtResource("4_0xb43")
 lifetime = 0.4
