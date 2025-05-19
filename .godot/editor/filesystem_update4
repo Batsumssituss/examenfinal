@@ -1,4 +1,5 @@
 res://Escenes/nau.tscn
+res://Escenes/escenaprincipal.tscn
 res://Escenes/joc.tscn
 res://Escenes/explosió.tscn
 res://Escenes/meteorit.tscn
@@ -7,10 +8,3 @@ res://Escenes/laser.tscn
 res://Escenes/marcador.tscn
 res://Escenes/power_up_bomba.tscn
 res://Escenes/power_up_vida.tscn
-res://Scripts/Meteorit.gd
-res://Scripts/PowerUPBomba.gd
-res://Scripts/Marcador.gd
-res://Scripts/nau.gd
-res://Scripts/BarraVida.gd
-res://Scripts/escenaprincipal.gd
-res://Escenes/escenaprincipal.tscn
